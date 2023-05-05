@@ -1,6 +1,12 @@
 # JupyterLab-Programming-Study-Env
 
-Docker image of Jupyterlab for multiple languages.
+Japanese
+これは多言語対応したJupyterlabのDockerイメージです。
+プログラミングの学習のために構築しました。
+
+English
+This is a Docker image of multi programming lang support Jupyterlab .
+It was built for learning programming.
 
 ## Support Programming Language
 * Python/C++/Java18/Javascript/typescript

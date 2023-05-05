@@ -1,0 +1,23 @@
+version: "3"
+services:
+  jupyter:
+    build: 
+        context: .
+        dockerfile: Dockerfile
+    restart: always
+    entrypoint: >
+      jupyter-lab
+      --allow-root
+      --ip=0.0.0.0
+      --port=8888
+      --no-browser
+      --NotebookApp.token=''
+      --notebook-dir=/root/work-dir
+    container_name: "py3-jupyter"
+    ports:
+      - "8888:8888"
+    tty: false 
+    working_dir: /root/work-dir
+    volumes:
+      - ./work-dir:/root/work-dir
+      - ./jupyter:/root/.jupyter

@@ -5,14 +5,14 @@
 プログラミングの学習のために構築しました。
 
 # Support Programming Language
-* Python/C++14,15, 19/Java18/Javascript/typescript
+* Python/C++14,15, 19/Java17/Javascript/typescript
 
 # インストール済みのカーネル
-* Python3.10.10
+* Python3.11
   * [IPython](https://ipython.org/)
 * C++ 11/14/17
   * [Xeus-Cling](https://github.com/jupyter-xeus/xeus-cling)
-* Java18
+* Java17
   * [Ganymede](https://github.com/dfm/Ganymede)
 * Javascript/typescript
   * [tslab](https://github.com/yunabe/tslab)

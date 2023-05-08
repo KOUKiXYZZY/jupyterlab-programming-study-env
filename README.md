@@ -13,7 +13,7 @@
 * C++ 11/14/17
   * [Xeus-Cling](https://github.com/jupyter-xeus/xeus-cling)
 * Java18
-  * [IJava](https://github.com/SpencerPark/IJava)
+  * [Ganymede](https://github.com/dfm/Ganymede)
 * Javascript/typescript
   * [tslab](https://github.com/yunabe/tslab)
 
@@ -24,7 +24,7 @@
 * [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git)
 * [jupyterlab_pygments](https://github.com/jupyterlab/jupyterlab_pygments)
 * [jupyterlab_widgets](https://github.com/jupyter-widgets/ipywidgets)
-* [jupyterlab-language-pack-ja-jp]
+* jupyterlab-language-pack-ja-jp
 * [jupyterlab-variableinspector](https://github.com/lckr/jupyterlab-variableInspector)
 
 

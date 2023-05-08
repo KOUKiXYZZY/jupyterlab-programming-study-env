@@ -20,4 +20,4 @@ services:
     working_dir: /root/work-dir
     volumes:
       - ./work-dir:/root/work-dir
-      - ./jupyter:/root/.jupyter
+      - ./setting:/root/.jupyter

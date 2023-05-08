@@ -3,7 +3,7 @@ services:
   jupyter:
     build: 
         context: .
-        dockerfile: Dockerfile.opt
+        dockerfile: Dockerfile
     restart: always
     entrypoint: >
       jupyter-lab

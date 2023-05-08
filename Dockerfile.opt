@@ -18,15 +18,12 @@ RUN apt update && apt install -y \
 &&  ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
 &&  apt autoremove \
 &&  apt-get clean \
-&&  rm -rf /var/lib/apt/lists/* 
-
-# micromambaをインストール
-RUN mkdir -p /opt/micromamba/ \
-&&  curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj -C /opt/micromamba 
-
+&&  rm -rf /var/lib/apt/lists/* \
+&&  mkdir -p /opt/micromamba/ \
+&&  curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj -C /opt/micromamba \
 # jupyterlabをインストール
-RUN eval "$(micromamba shell hook -s posix)" \
-    && micromamba activate && micromamba install -y  git \
+&&  eval "$(micromamba shell hook -s posix)" \
+&&  micromamba activate && micromamba install -y  git \
     python pip \
     nodejs  \
     openjdk \
@@ -38,10 +35,9 @@ RUN eval "$(micromamba shell hook -s posix)" \
     jupyterlab-drawio \
     xeus-cling \
     -c conda-forge \
-&&  micromamba clean -a
-
+&&  micromamba clean -a \
 # pythonにプログラミングに必要になるだろうパッケージをインストールする
-RUN pip install --no-cache-dir \
+&&  pip install --no-cache-dir \
     numpy \
     pandas \
     scrapy \
@@ -60,17 +56,15 @@ RUN pip install --no-cache-dir \
     xpath-py \
     fsspec \
     s3fs \
-&&  pip cache purge
-
+&&  pip cache purge \
 # tslab
-RUN npm install -g tslab \
+&&  npm install -g tslab \
 &&  tslab install --python=python \
-&&  npm cache clean --force
+&&  npm cache clean --force \
 
 # Install JVM languages
 ## Java
 # https://github.com/allen-ball/ganymede
-RUN curl -sL "https://github.com/allen-ball/ganymede/releases/download/v${GANYMEDE_VERSION}/ganymede-${GANYMEDE_VERSION}.jar" -o /tmp/ganymede.jar \
-&&  java \
-      -jar /tmp/ganymede.jar  \
+&&  curl -sL "https://github.com/allen-ball/ganymede/releases/download/v${GANYMEDE_VERSION}/ganymede-${GANYMEDE_VERSION}.jar" -o /tmp/ganymede.jar \
+&&  java -jar /tmp/ganymede.jar  \
       -i --sys-prefix --id=java --display-name=Java18 --copy-jar=true

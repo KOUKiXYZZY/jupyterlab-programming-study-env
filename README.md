@@ -13,7 +13,7 @@
 * C++ 11/14/17
   * [Xeus-Cling](https://github.com/jupyter-xeus/xeus-cling)
 * Java17
-  * [Ganymede](https://github.com/allen-ball/ganymede)
+  * [IJava](https://github.com/SpencerPark/IJava)
 * Javascript/typescript
   * [tslab](https://github.com/yunabe/tslab)
 

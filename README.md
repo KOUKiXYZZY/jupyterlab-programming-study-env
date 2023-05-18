@@ -28,4 +28,22 @@
 * [jupyterlab-variableinspector](https://github.com/lckr/jupyterlab-variableInspector)
 
 
-## Python向けライブラリ
+## 導入済みのPythonライブラリ
+  * numpy
+  * pandas 
+  * scrapy 
+  * scipy 
+  * scikit-learn 
+  * pycaret 
+  * matplotlib 
+  * japanize_matplotlib 
+  * mlxtend 
+  * seaborn 
+  * plotly 
+  * requests 
+  * beautifulsoup4 
+  * Pillow 
+  * leafmap 
+  * xpath-py 
+  * fsspec 
+  * s3fs 

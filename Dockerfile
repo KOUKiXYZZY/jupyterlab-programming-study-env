@@ -13,6 +13,7 @@ ENV TZ=Asia/Tokyo \
 
 RUN apt update && apt install -y \
      bzip2 \
+     unzip \
      curl \
      tzdata \
 &&  ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
@@ -67,10 +68,8 @@ RUN npm install -g tslab \
 &&  tslab install --python=python \
 &&  npm cache clean --force
 
-# Install JVM languages
-## Java
-# https://github.com/allen-ball/ganymede
-RUN curl -sL "https://github.com/allen-ball/ganymede/releases/download/v${GANYMEDE_VERSION}/ganymede-${GANYMEDE_VERSION}.jar" -o /tmp/ganymede.jar \
-&&  java \
-      -jar /tmp/ganymede.jar  \
-      -i --sys-prefix --id=java --display-name=Java18 --copy-jar=true
+# IJava
+RUN mkdir /opt/IJava && cd /opt/IJava \
+&&  curl -sL https://github.com/SpencerPark/IJava/releases/download/v1.3.0/ijava-1.3.0.zip -o ijava.zip && unzip ./ijava.zip -d ./ \
+&&  python install.py \
+&&  cd ../ && rm -rf IJava

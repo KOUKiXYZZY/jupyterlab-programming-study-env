@@ -1,3 +1,4 @@
 # gitignore
 work-dir/*
 setting/*
+jupyter/*

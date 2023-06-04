@@ -28,16 +28,23 @@ RUN mkdir -p /opt/micromamba/ \
 # jupyterlabをインストール
 RUN eval "$(micromamba shell hook -s posix)" \
     && micromamba activate && micromamba install -y  git \
-    python pip \
-    nodejs  \
-    openjdk \
-    jupyterlab \
-    jupyterlab-language-pack-ja-jp jupyterlab-variableinspector \
-    jupyterlab_code_formatter black isort \
-    ipywidgets jupyterlab-git \
-    jupyterlab-github jupyterlab_pygments jupyterlab_widgets \
-    jupyterlab-drawio \
-    xeus-cling \
+    python=3.10 \
+    pip=23.1.2 \
+    nodejs=18.15.0 \
+    openjdk=20.0.0 \
+    jupyterlab=3.6.3 \
+    jupyterlab-language-pack-ja-jp=3.6.post3 \
+#    jupyterlab-variableinspector \
+    jupyterlab_code_formatter=2.2.1 \
+    jupyterlab_widgets=3.0.7 \
+    jupyterlab_pygments=0.2.2 \
+    black \
+    isort \
+    ipywidgets=8.0.6 \
+    jupyterlab-git=0.41 \
+    jupyterlab-github=3.0 \
+    jupyterlab-drawio=0.9 \
+    xeus-cling=0.15 \
     -c conda-forge \
 &&  micromamba clean -a
 
@@ -64,7 +71,7 @@ RUN pip install --no-cache-dir \
 &&  pip cache purge
 
 # tslab
-RUN npm install -g tslab \
+RUN npm install -g tslab@1.0.21 \
 &&  tslab install --python=python \
 &&  npm cache clean --force
 
@@ -73,3 +80,10 @@ RUN mkdir /opt/IJava && cd /opt/IJava \
 &&  curl -sL https://github.com/SpencerPark/IJava/releases/download/v1.3.0/ijava-1.3.0.zip -o ijava.zip && unzip ./ijava.zip -d ./ \
 &&  python install.py \
 &&  cd ../ && rm -rf IJava
+
+# Bash Kernel
+RUN pip install bash_kernel==0.9.0 \
+&& python -m bash_kernel.install
+
+
+RUN jupyter lab build

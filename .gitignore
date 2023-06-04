@@ -1,4 +1,6 @@
 # gitignore
 work-dir/*
 setting/*
-jupyter/*
+
+*.swp
+.DS_Store

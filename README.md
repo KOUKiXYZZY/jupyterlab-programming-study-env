@@ -31,7 +31,9 @@
 
 ## 導入済みのPythonライブラリ
   * numpy
-  * pandas 
+  * pandas
+  * opencv-python
+  * opencv-contrib-python
   * scrapy 
   * scipy 
   * scikit-learn 

@@ -50,8 +50,11 @@ RUN eval "$(micromamba shell hook -s posix)" \
 
 # pythonにプログラミングに必要になるだろうパッケージをインストールする
 RUN pip install --no-cache-dir \
+    MarkupSafe==2.0.1 \
     numpy \
     pandas \
+    opencv-python \
+    opencv-contrib-python \
     scrapy \
     scipy \
     scikit-learn \
@@ -68,6 +71,8 @@ RUN pip install --no-cache-dir \
     xpath-py \
     fsspec \
     s3fs \
+    PyYAML==5.3.1 \ 
+&&  pip3 install MarkupSafe elyra \
 &&  pip cache purge
 
 # tslab

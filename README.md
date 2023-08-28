@@ -8,7 +8,7 @@
 * Python/C++14,15, 19/Java17/Javascript/typescript
 
 # インストール済みのカーネル
-* Python3.11
+* Python3.10
   * [IPython](https://ipython.org/)
 * C++ 11/14/17
   * [Xeus-Cling](https://github.com/jupyter-xeus/xeus-cling)

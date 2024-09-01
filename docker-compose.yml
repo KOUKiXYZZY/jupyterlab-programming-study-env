@@ -12,7 +12,7 @@ services:
       --port=8888
       --no-browser
       --NotebookApp.token=''
-      --notebook-dir=/app
+      --notebook-dir=/app/work-dir
     container_name: "py3-jupyter"
     ports:
       - "8888:8888"

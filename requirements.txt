@@ -2,8 +2,6 @@ jupyterlab==4.3.6
 jupyterlab-language-pack-ja-JP==4.3.post3
 black
 isort
-jupyterlab-git 
-jupyterlab-github 
 numpy 
 pandas 
 opencv-python 

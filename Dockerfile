@@ -8,8 +8,7 @@ COPY requirements.txt .
 
 RUN apt-get update && apt-get install -y \
     build-essential \
-    libatlas-base-dev \
-	git && \
+    libatlas-base-dev && \
 	pip3 install --upgrade pip && \
 	pip3 install -r requirements.txt
 

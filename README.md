@@ -7,7 +7,7 @@ Jupyterlabの自作イメージ
 * Python
 
 ## インストール済みの拡張
-* [Jupyterlab-drawio](https://github.com/QuantStack/jupyterlab-drawio)
+* ~~[Jupyterlab-drawio](https://github.com/QuantStack/jupyterlab-drawio)~~
 * [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git)
 * [jupyterlab-github](https://github.com/jupyterlab/jupyterlab-github)
 * ~~[jupyterlab_pygments](https://github.com/jupyterlab/jupyterlab_pygments)~~

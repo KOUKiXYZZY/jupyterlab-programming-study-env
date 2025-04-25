@@ -1,10 +1,9 @@
-jupyterlab
-jupyterlab-language-pack-ja-JP 
-black 
+jupyterlab==4.3.6
+jupyterlab-language-pack-ja-JP==4.3.post3
+black
 isort
 jupyterlab-git 
 jupyterlab-github 
-jupyterlab-drawio
 numpy 
 pandas 
 opencv-python 
@@ -23,4 +22,5 @@ Pillow
 leafmap
 xpath-py
 fsspec
+boto3
 s3fs
